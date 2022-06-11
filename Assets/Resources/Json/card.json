@@ -1,0 +1,2140 @@
+{
+  "cardList": [
+    {
+      "No": "1R01",
+      "Name": "제국 근위병",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/1. Empire/01 제국 근위병",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "제식"
+      ],
+      "Effect": [
+        ""
+
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R02",
+      "Name": "제국 징집병",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/1. Empire/02 제국 징집병",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "토큰"
+      ],
+      "Effect": [
+        ""
+
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R03",
+      "Name": "지정 사수",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/1. Empire/03 지정 사수",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "[L] : 필드의 유닛 1장에 2점의 피해를 준다."
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R04",
+      "Name": "제국 공병",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/1. Empire/04 제국 공병",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "[L] : 필드의 지속 전략 1장을 폐기한다.",
+        "[L] : 자신 필드의 기갑 유닛 1장에 +1/+0을 부여한다."
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R05",
+      "Name": "제국 호위병단",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/1. Empire/05 제국 호위병단",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "방호 1",
+        "경계"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R06",
+      "Name": "제국 공수부대",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/1. Empire/06 제국 공수부대",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "속공"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R07",
+      "Name": "세금 징수인",
+      "Attack": 1,
+      "Health": 2,
+      "Sprite": "Sprites/1. Empire/07 세금 징수인",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 3,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "상대가 내는 모든 카드의 코스트는 1 증가한다"
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R08",
+      "Name": "최전선 지원부대",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/1. Empire/08 최전선 지원부대",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "등장 : 자신 필드에 \"제국 징집병\" 2장을 놓는다."
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R09",
+      "Name": "철혈의 다야르",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/1. Empire/09 철혈의 다야르",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "고유"
+      ],
+      "Effect": [
+        "자신 필드에 이 카드 이외의 보병 유닛이 존재할 경우, 이 카드는 공격의 대상이 되지 않는다.",
+        "자신 필드의 제국 보병 유닛은 \"방호 1\", \"속공\", \"경계\"를 얻는다."
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R10",
+      "Name": "백전불사의 마르넨",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/1. Empire/10 백전불사의 마르넨",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "고유",
+        "속공",
+        "유지비 R"
+      ],
+      "Effect": [
+        "필드에 락된 이 카드가 폐기될 경우, 대신 이 카드를 패로 되돌린다."
+      ],
+      "Tag": [
+        "제국",
+        "보병"
+      ]
+    },
+    {
+      "No": "1R11",
+      "Name": "태엽 거병",
+      "Attack": 2,
+      "Health": 3,
+      "Sprite": "Sprites/1. Empire/11 태엽 거병",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "제식"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "제국",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1R12",
+      "Name": "대포 거병",
+      "Attack": 2,
+      "Health": 3,
+      "Sprite": "Sprites/1. Empire/12 대포 거병",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "유지비 R"
+      ],
+      "Effect": [
+        "[L] : 필드의 유닛 1장 또는 상대 HQ에 3점의 피해를 준다."
+      ],
+      "Tag": [
+        "제국",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1R13",
+      "Name": "방패 거병",
+      "Attack": 2,
+      "Health": 3,
+      "Sprite": "Sprites/1. Empire/13 방패 거병",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "방호 1",
+        "경계"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "제국",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1R14",
+      "Name": "제국 요격선",
+      "Attack": 2,
+      "Health": 3,
+      "Sprite": "Sprites/1. Empire/14 제국 요격선",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "유지비 R"
+      ],
+      "Effect": [
+        "[L] : 필드의 지속 전략 1장을 폐기한다.",
+        "[코스트 R, L] : 상대 필드의 유닛 전부에게 1점의 피해를 준다."
+      ],
+      "Tag": [
+        "제국",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1R15",
+      "Name": "제국 보급선",
+      "Attack": 2,
+      "Health": 3,
+      "Sprite": "Sprites/1. Empire/15 제국 보급선",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "등장 : 덱에서 제국 전략 카드 1장을 패에 넣는다."
+      ],
+      "Tag": [
+        "제국",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1R16",
+      "Name": "제국 수송선",
+      "Attack": 1,
+      "Health": 5,
+      "Sprite": "Sprites/1. Empire/16 제국 수송선",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비",
+        "방호 1",
+        "유지비 R"
+      ],
+      "Effect": [
+        "[코스트 R, L] : 자신 필드에 \"제국 징집병\" 2장을 놓는다."
+      ],
+      "Tag": [
+        "제국",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1R17",
+      "Name": "제국의 영광호",
+      "Attack": 3,
+      "Health": 6,
+      "Sprite": "Sprites/1. Empire/17 제국의 영광호",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 3,
+      "ColorCost": 3,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비",
+        "방호 1",
+        "유지비 R"
+      ],
+      "Effect": [
+        "이 카드는 언락되어 있는 동안 \"방호 2\"를 얻는다.",
+        "[L] : 자신 필드에 \" 제국 징집병\" 1장을 놓는다.",
+        "[코스트 R, L] : 이 카드 이외의 자신 필드의 제국 유닛 전부에 +1/+0을 부여한다."
+      ],
+      "Tag": [
+        "제국",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1R18",
+      "Name": "제국 군견",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/1. Empire/18 제국 군견",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "속공"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "제국",
+        "생체"
+      ]
+    },
+    {
+      "No": "1R19",
+      "Name": "헬릭사이트 강화견",
+      "Attack": 3,
+      "Health": 2,
+      "Sprite": "Sprites/1. Empire/19 헬릭사이트 강화견",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비",
+        "속공",
+        "방호 1"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "제국",
+        "기갑",
+        "생체"
+      ]
+    },
+    {
+      "No": "1R20",
+      "Name": "정밀 사격",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/20 정밀 사격",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Strategy",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "필드의 유닛 1장에 3점의 피해를 준다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R21",
+      "Name": "전략적 폭격",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/21 전략적 폭격",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "필드의 유닛 전부에게 1점의 피해를 준다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R22",
+      "Name": "일제 사격",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/22 일제 사격",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "필드의 유닛 1장을 지정한다.\n자신 필드의 제국 보병 유닛의 수만큼, 지정한 유닛에게 피해를 준다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R23",
+      "Name": "징집령",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/23 징집령",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 3,
+      "Kind": "Strategy",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드에 \"제국 징집병\" 3장을 놓는다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R24",
+      "Name": "보급품 투하",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/24 보급품 투하",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 1,
+      "Kind": "Strategy",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "덱에서 카드를 2장 드로우한다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R25",
+      "Name": "초토화",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/25 초토화",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "필드의 지속 전략을 전부 폐기한다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R26",
+      "Name": "참호 진지",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/26 참호 진지",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Strategy",
+      "Keyword": [
+        "지속"
+      ],
+      "Effect": [
+        "자신 필드의 제국 보병 유닛 전부는 \"경계\"를 얻는다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R27",
+      "Name": "기관총 진지",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/27 기관총 진지",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "지속"
+      ],
+      "Effect": [
+        "자신 필드의 제국 보병 유닛 전부에 +1/0을 부여한다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R28",
+      "Name": "헬릭사이트 광산",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/28 헬릭사이트 광산",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 3,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비",
+        "지속"
+      ],
+      "Effect": [
+        "[L] : 덱에서 카드를 1장 드로우한다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R29",
+      "Name": "헬릭사이트 혁신",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/1. Empire/29 헬릭사이트 혁신",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "덱에서 제국 기갑 유닛 2장을 패에 넣는다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R30",
+      "Name": "총통 톨린",
+      "Attack": 0,
+      "Health": 30,
+      "Sprite": "Sprites/1. Empire/30 총통 톨린",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R31",
+      "Name": "대공 므구와르",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/1. Empire/31 대공 므구와르",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "[L] : 자신이 제국 기갑 유닛을 낼 때, 그 카드의 코스트 R을 이 카드로 지불한다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R32",
+      "Name": "장교 소가르",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/1. Empire/32 장교 소가르",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드의 \"제국 근위병\"은 \"퇴장 : 자신의 패에 '제국 징집병' 1장을 넣는다.\"를 얻는다.",
+        "[코스트 R, L] : 자신 필드에 \"제국 징집병\" 1장을 놓는다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+    {
+      "No": "1R33",
+      "Name": "장교 소가르(개선안)",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/1. Empire/32 장교 소가르",
+      "Faction": "Empire",
+      "Color": "R",
+      "CardFront": "Sprites/card/01 제국카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드의 제국 유닛 하나의 유지비 R을 대체한다.",
+        "자신 필드의 \"제국 근위병\"은 \"퇴장 : 자신의 패에 \"제국 징집병\" 1장을 넣는다.\"를 얻는다.",
+        "[L] : 자신 필드에 \"제국 징집병\" 1장을 놓는다."
+      ],
+      "Tag": [
+        "제국"
+      ]
+    },
+
+    {
+      "No": "1B01",
+      "Name": "민초단원",
+      "Attack": 0,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/01_민초단원",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "Unit",
+      "Keyword": [
+        "제식"
+      ],
+      "Effect": [
+        "[L] : 자신이 련맹 카드를 내거나 련맹 카드의 효과를 발동할 때, 필드의 이 카드를 폐기하는 것으로 이 카드로 그 카드 또는 효과의 코스트 B를 지불한다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B02",
+      "Name": "혁명 투사",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/02_혁명 투사",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "속공"
+      ],
+      "Effect": [
+        "퇴장 : 필드의 유닛 1장에 2점의 피해를 준다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B03",
+      "Name": "련맹 연락책",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/03_련맹 연락책",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "퇴장 : 덱에서 련맹 지속 전략 1장을 패에 넣는다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B04",
+      "Name": "련맹 폭력단",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/04_련맹 폭력단",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "등장 : 자신 필드의 \"민초단원\" 전부에게 차례 종료시까지 +1/+0을 부여한다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B05",
+      "Name": "련맹 기술단",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/05_련맹 기술단",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "퇴장 : 필드의 지속 전략 1장을 폐기한다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B06",
+      "Name": "련맹 특공 용사",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/06_련맹 특공 용사",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "퇴장 : 필드의 유닛 1장을 폐기한다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B07",
+      "Name": "련맹 공작원",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/07_련맹 공작원",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "등장 : 상대가 저축한 카드 2장을 폐기한다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B08",
+      "Name": "인민들의 귀감",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/08_인민들의 귀감",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\" 전부에 +1/+1을 부여한다.",
+        "퇴장 : 패 또는 덱에서 \"민초단원\"을 2장까지 자신 필드에 놓는다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B09",
+      "Name": "급조 전차",
+      "Attack": 2,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/09_급조 전차",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "제식",
+        "속공",
+        "시한부"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "련맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1B10",
+      "Name": "이동식 바리케이드",
+      "Attack": 3,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/10_이동식 바리케이드",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "비전투",
+        "방호 1"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "련맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1B11",
+      "Name": "련맹 수송차",
+      "Attack": 0,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/11_련맹 수송차",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "시한부"
+      ],
+      "Effect": [
+        "퇴장 : 덱에서 \"민초단원\" 2장을 패에 넣는다."
+      ],
+      "Tag": [
+        "련맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1B12",
+      "Name": "련맹 박격포병",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/12_련맹 박격포병",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "퇴장 : 필드의 유닛 1장 또는 상대 HQ에 3점의 피해를 준다."
+      ],
+      "Tag": [
+        "련맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1B13",
+      "Name": "인민의 파쇄추",
+      "Attack": 0,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/13_인민의 파쇄추",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "속공",
+        "시한부"
+      ],
+      "Effect": [
+        "등장 : 자신 필드의 \"민초단원\" 1장당, 이 카드에 차례 종료시까지 +1/+0을 부여한다."
+      ],
+      "Tag": [
+        "련맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1B14",
+      "Name": "위장 화물차",
+      "Attack": 2,
+      "Health": 1,
+      "Sprite": "Sprites/2. Union/14_위장 화물차",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "퇴장 : 필드의 유닛 1장 또는 지속 전략 1장을 폐기한다."
+      ],
+      "Tag": [
+        "련맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1B15",
+      "Name": "혁명의 쾌거",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/2. Union/15_혁명의 쾌거",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "방호 1"
+      ],
+      "Effect": [
+        "등장 : 상대 필드의 유닛 1장에 2점의 피해를 준다."
+      ],
+      "Tag": [
+        "련맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1B16",
+      "Name": "바퀴 달린 화약고",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/2. Union/16_바퀴 달린 화약고",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "퇴장 : 상대 필드의 유닛 전부와 상대의 HQ에 1점의 피해를 준다."
+      ],
+      "Tag": [
+        "련맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1B17",
+      "Name": "스콜로노프 특제 구축전차",
+      "Attack": 4,
+      "Health": 3,
+      "Sprite": "Sprites/2. Union/17_스콜로노프 특제 구축전차",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 2,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "고유",
+        "방호 1"
+      ],
+      "Effect": [
+        "[L] : 이 카드 이외의 자신 필드의 련맹 기갑 유닛 1장에 +2/+0과 \"시한부\"를 부여한다.",
+        "[코스트 BB, L] : 이 카드 이외의 자신 필드의 련맹 기갑 유닛 전부에 +2/+0과 \"시한부\"를 부여한다."
+      ],
+      "Tag": [
+        "련맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1B18",
+      "Name": "털복숭이 동무",
+      "Attack": 1,
+      "Health": 3,
+      "Sprite": "Sprites/2. Union/18_털복숭이 동무",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "방호 1"
+      ],
+      "Effect": [
+        "자신 필드의 이 유닛은 \"민초단원\"으로 취급한다."
+      ],
+      "Tag": [
+        "련맹",
+        "생체"
+      ]
+    },
+    {
+      "No": "1B19",
+      "Name": "겨울잠 설친 불곰",
+      "Attack": 2,
+      "Health": 3,
+      "Sprite": "Sprites/2. Union/19_겨울잠 설친 불곰",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Unit",
+      "Keyword": [
+        "극비",
+        "방호 1"
+      ],
+      "Effect": [
+        "자신 필드의 이 유닛은 \"민초단원\"으로 취급한다.",
+        "등장 : 상대 필드의 유닛을 2장까지 락한다."
+      ],
+      "Tag": [
+        "련맹",
+        "생체"
+      ]
+    },
+    {
+      "No": "1B20",
+      "Name": "명예인민 테이",
+      "Attack": 2,
+      "Health": 3,
+      "Sprite": "Sprites/2. Union/20_명예인민 테이",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 3,
+      "Kind": "Unit",
+      "Keyword": [
+        "고유",
+        "방호 1"
+      ],
+      "Effect": [
+        "이 카드 이외의 자신 필드의 련맹 유닛이 피해를 받을 경우, 이 카드가 그 피해를 대신 받을 수 있다. 이렇게 피해를 받을 경우, 이 유닛은 그 피해에 한해 \"방호 2\"를 얻는다."
+      ],
+      "Tag": [
+        "련맹",
+        "생체"
+      ]
+    },
+    {
+      "No": "1B21",
+      "Name": "화전 양면 전술",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/21_화전 양면 전술",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Strategy",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\" 2장과 상대 필드의 유닛 또는 지속 전략 1장을 폐기한다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B22",
+      "Name": "배급 경제",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/22_배급 경제",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Strategy",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\" 2장을 폐기하고, 덱에서 카드를 2장 드로우한다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B23",
+      "Name": "천리마 개조",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/23_천리마 개조",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드의 련맹 기갑 유닛 전부에 +2/+0과 \"시한부\"를 부여한다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B24",
+      "Name": "인민의 목소리",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/24_인민의 목소리",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "자신의 덱에서 \"민초단원\" 2장을 자신 필드에 놓는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B25",
+      "Name": "민초의 난",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/25_민초의 난",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 3,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\"의 수까지, 필드의 유닛 또는 지속 전략을 폐기한다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B26",
+      "Name": "긴급 배치 지령",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/26_긴급 배치 지령",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Strategy",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\" 2장을 폐기하고, 덱에서 고유 또는 극비 이외의 련맹 기갑 유닛 1장을 필드에 놓는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B27",
+      "Name": "혁명의 요람",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/27_혁명의 요람",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비",
+        "지속"
+      ],
+      "Effect": [
+        "[L] : 덱에서 \"민초단원\" 1장을 패에 넣는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B28",
+      "Name": "련맹 공장 지대",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/28_련맹 공장 지대",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 3,
+      "Kind": "Strategy",
+      "Keyword": [
+        "지속",
+        "유지비 B"
+      ],
+      "Effect": [
+        "[L] : 자신이 련맹 기갑 유닛을 낼 때, 이 카드로 그 카드의 코스트 B를 지불한다.",
+        "[L] : 덱에서 련맹 기갑 유닛 1장을 패에 넣는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B29",
+      "Name": "고난의 행군",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/29_고난의 행군",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "자신 필드의 련맹 기갑 유닛 1장을 선택하고, 선택한 유닛의 코스트 1점당 폐기된 \"민초단원\" 1장을 패에 넣는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B30",
+      "Name": "전격 작전",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/30_전격 작전",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비"
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\"을 임의의 매수만큼 폐기하고, 폐기한 \"민초단원\" 1장당 자신 필드의 련맹 기갑 유닛 전부에게 차례 종료시까지 +1/+0을 부여한다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B31",
+      "Name": "인민의 작별주",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/31_인민의 작별주",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "지속"
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\" 전부는 \"[L] : 상대 HQ에 1점의 피해를 준다.\"를 얻는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B32",
+      "Name": "영구 혁명론",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/32_영구 혁명론",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 3,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비",
+        "지속"
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\" 전부는 \"퇴장 : 이 카드를 덱에 넣어 섞는다.\"를 얻는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B33",
+      "Name": "련맹식 보급술",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/33_련맹식 보급술",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 3,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비",
+        "지속"
+      ],
+      "Effect": [
+        "[L] : 자신 필드의 \"민초단원\"을 1장 폐기하고 덱에서 카드를 1장 뽑는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B34",
+      "Name": "인민들이여, 단결하라!",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/2. Union/34_인민들이여, 단결하라",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 2,
+      "Kind": "Strategy",
+      "Keyword": [
+        "극비",
+        "지속"
+      ],
+      "Effect": [
+        "[코스트 B, L] : 차례 종료시까지, 자신 필드의 \"민초단원\" 전부에게 +1/+0을 부여한다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B35",
+      "Name": "인간 사냥꾼 리창욱",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/2. Union/35_인간 사냥꾼 리창욱",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\" 전부는 \"퇴장 : 상대 필드의 유닛 1장에 1점의 피해를 준다.\"를 얻는다.",
+        "[코스트 B, L] : 상대 필드의 유닛 1장 또는 상대 HQ에 2점의 피해를 준다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B36",
+      "Name": "인민 대표 자파르 알 라키르",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/2. Union/36_인민 대표 자파르 알 라키르",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신 필드의 \"민초단원\" 전부는 \"방호 1\"을 얻는다.",
+        "[코스트 B] : 자신이 련맹 보병 유닛을 낼 때, 그 유닛의 \"퇴장\" 효과와 동일한 \"등장\" 효과를 부여한다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+    {
+      "No": "1B37",
+      "Name": "수석 기술자 그리고리 스콜로노프",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/2. Union/37_수석 기술자 그리고리 스콜로노프",
+      "Faction": "Union",
+      "Color": "B",
+      "CardFront": "Sprites/card/02 련맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "[코스트 B, L] : 자신이 련맹 기갑 유닛을 낼 때 자신 필드의 \"민초단원\"을 코스트로 사용할 경우, 그 카드를 폐기하지 않아도 된다.",
+        "[코스트 B, L] : 덱에서 련맹 기갑 유닛 1장을 패에 넣는다."
+      ],
+      "Tag": [
+        "련맹"
+      ]
+    },
+
+    {
+      "No": "1W01",
+      "Name": "내방자 드론",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/3. Visitor/01 내방자 드론",
+      "Faction": "Visitor",
+      "Color": "W",
+      "CardFront": "Sprites/card/03 내방자카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "토큰"
+      ],
+      "Effect": [
+        "예견 : 이 카드를 저축한다."
+      ],
+      "Tag": [
+        "내방자",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1W02",
+      "Name": "내방자 안드로이드",
+      "Attack": 1,
+      "Health": 2,
+      "Sprite": "Sprites/3. Visitor/02 내방자 안드로이드",
+      "Faction": "Visitor",
+      "Color": "W",
+      "CardFront": "Sprites/card/03 내방자카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "토큰",
+        "과부하 WW/2"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "내방자",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1W03",
+      "Name": "듀칼리온 탐사단",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/3. Visitor/03 듀칼리온 탐사단",
+      "Faction": "Visitor",
+      "Color": "W",
+      "CardFront": "Sprites/card/03 내방자카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신이 과부하 효과로 내방자 전략의 코스트를 지불하는 경우, 그 카드로 추가로 W를 지불할 수 있다.",
+        "[L] : 자신의 덱에서 카드가 폐기될 때, 그 중 내방자 전략 1장을 덱의 맨 밑으로 보낸다. 이때, 되돌린 카드의 효과는 발동하지 않는다."
+      ],
+      "Tag": [
+        "내방자"
+      ]
+    },
+    {
+      "No": "1W04",
+      "Name": "우트나 개척회사",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/3. Visitor/04 우트나 개척회사",
+      "Faction": "Visitor",
+      "Color": "W",
+      "CardFront": "Sprites/card/03 내방자카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신의 내방자 카드의 효과로 \"내방자 드론\"을 패 또는 덱에 넣을 경우, 대신 \"내방자 안드로이드\"를 패 또는 덱에 넣는다.",
+        "[코스트 WW, L] : 자신 필드에 \"내방자 드론\" 2장을 놓는다."
+      ],
+      "Tag": [
+        "내방자"
+      ]
+    },
+    {
+      "No": "1W05",
+      "Name": "마트야 방위대",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/3. Visitor/05 마트야 방위대",
+      "Faction": "Visitor",
+      "Color": "W",
+      "CardFront": "Sprites/card/03 내방자카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "[L] : 자신의 덱에서 카드가 폐기될 때, 그 중 내방자 보병 유닛 1장을 덱의 맨 밑으로 보낸다.",
+        "[코스트 W, L] : 자신이 내방자 보병 유닛을 필드에 낼 때, 그 유닛 1장에 +1/+0을 부여한다."
+      ],
+      "Tag": [
+        "내방자"
+      ]
+    },
+
+    {
+      "No": "1G01",
+      "Name": "스캐빈저",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/4. Clan/01. 스캐빈저",
+      "Faction": "Clan",
+      "Color": "G",
+      "CardFront": "Sprites/card/04 혈맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "Unit",
+      "Keyword": [
+        "토큰"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "혈맹",
+        "생체"
+      ]
+    },
+    {
+      "No": "1G02",
+      "Name": "노예 기수",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/4. Clan/02. 노예 기수",
+      "Faction": "Clan",
+      "Color": "G",
+      "CardFront": "Sprites/card/04 혈맹카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 0,
+      "Kind": "Unit",
+      "Keyword": [
+        "제식",
+        "전리품"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "혈맹",
+        "보병"
+      ]
+    },
+    {
+      "No": "1G03",
+      "Name": "노예 기병",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/4. Clan/03. 노예 기병",
+      "Faction": "Clan",
+      "Color": "G",
+      "CardFront": "Sprites/card/04 혈맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "제식",
+        "속공",
+        "전리품"
+      ],
+      "Effect": [
+        "[L] : 필드의 유닛 1장에 1점의 피해를 준다."
+      ],
+      "Tag": [
+        "혈맹",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1G04",
+      "Name": "노예 검투사",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/4. Clan/04. 노예 검투사",
+      "Faction": "Clan",
+      "Color": "G",
+      "CardFront": "Sprites/card/04 혈맹카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "경계",
+        "전리품"
+      ],
+      "Effect": [
+        "이 카드는 상대가 공격할 때, 자신 필드의 카드 수가 상대 필드의 카드 수 미만이면 폐기된다"
+      ],
+      "Tag": [
+        "혈맹",
+        "보병"
+      ]
+    },
+
+    {
+      "No": "1V01",
+      "Name": "축제의 광란",
+      "Attack": 0,
+      "Health": 0,
+      "Sprite": "Sprites/5. Festival/01 축제의 광란",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "Strategy",
+      "Keyword": [
+        "토큰"
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "축제"
+      ]
+    },
+    {
+      "No": "1V02",
+      "Name": "연출자 파이어워크",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/5. Festival/02 연출자 파이어워크",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "[L] : 자신이 저축한 \"축제의 광란\"을 전부 폐기하고, 폐기한 카드 1장당 상대 HQ에 1점의 피해를 준다."
+      ],
+      "Tag": [
+        "축제"
+      ]
+    },
+    {
+      "No": "1V03",
+      "Name": "무덤도 웃기는 그레이브",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/5. Festival/03 무덤도 웃기는 그레이브",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "자신의 차례 종료 시 자신 필드에 축제 유닛이 적어도 1장 있을 경우, 상대 필드의 락된 유닛 1장당 \"축제의 광란\" 1장을 저축한다.",
+        "[코스트 VV, L] : 상대 필드의 카드 1장에 공포를 건다."
+      ],
+      "Tag": [
+        "축제"
+      ]
+    },
+    {
+      "No": "1V04",
+      "Name": "축제 단장 디누만",
+      "Attack": 0,
+      "Health": 20,
+      "Sprite": "Sprites/5. Festival/04 축제 단장 디누만",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 0,
+      "Kind": "HQ",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "상대 필드의 카드에 공포를 걸 때마다, 이 카드의 체력을 2점 회복한다."
+      ],
+      "Tag": [
+        "축제"
+      ]
+    },
+    {
+      "No": "1V05",
+      "Name": "문드러진 유랑단원",
+      "Attack": 1,
+      "Health": 1,
+      "Sprite": "Sprites/5. Festival/05 문드러진 유랑단원",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "제식",
+        "광란 1"
+      ],
+      "Effect": [
+        "등장 [L] : 이 카드를 폐기한다."
+      ],
+      "Tag": [
+        "축제",
+        "보병"
+      ]
+    },
+    {
+      "No": "1V06",
+      "Name": "분칠한 호객꾼",
+      "Attack": 0,
+      "Health": 2,
+      "Sprite": "Sprites/5. Festival/06 분칠한 호객꾼",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        "앵콜 V"
+      ],
+      "Effect": [
+        "퇴장 : 폐기된 자신의 비용 V의  \"분칠한 호객꾼\" 이외 축제 유닛 1장을 자신 필드에 락된 상태로 놓습니다."
+      ],
+      "Tag": [
+        "축제",
+        "보병"
+      ]
+    },
+    {
+      "No": "1V07",
+      "Name": "얼굴 뜯긴 곡예사",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/5. Festival/07 얼굴 뜯긴 곡예사",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        ""
+      ],
+      "Tag": [
+        "축제",
+        "보병"
+      ]
+    },
+    {
+      "No": "1V08",
+      "Name": "칼 토하는 춤꾼",
+      "Attack": 2,
+      "Health": 1,
+      "Sprite": "Sprites/5. Festival/08 칼 토하는 춤꾼",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "[L] 자신 필드의 유닛 하나를 폐기한다. 덱에서 비용 V의 축제 유닛 하나를 자신필드에 소환한다."
+      ],
+      "Tag": [
+        "축제",
+        "보병"
+      ]
+    },
+    {
+      "No": "1V09",
+      "Name": "팔많은 힘꾼",
+      "Attack": 0,
+      "Health": 2,
+      "Sprite": "Sprites/5. Festival/09 팔많은 힘꾼",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 1,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "이 유닛이 필드에 있을 때 다른 유닛이 폐기될 때마다 +1/+0을 얻습니다."
+      ],
+      "Tag": [
+        "축제",
+        "보병"
+      ]
+    },
+    {
+      "No": "1V10",
+      "Name": "꿀꺽 수레",
+      "Attack": 3,
+      "Health": 4,
+      "Sprite": "Sprites/5. Festival/10 꿀꺽 수레",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 3,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "포식 : 상대 필드의 카드 1장에 공포를 건다."
+      ],
+      "Tag": [
+        "축제",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1V11",
+      "Name": "폭죽 수레",
+      "Attack": 2,
+      "Health": 3,
+      "Sprite": "Sprites/5. Festival/11 폭죽 수레",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 0,
+      "ColorCost": 5,
+      "Kind": "Unit",
+      "Keyword": [
+        "앵콜 V"
+      ],
+      "Effect": [
+        "포식 : 상대 필드의 카드 1장에 공포를 건다.",
+        "[L] : 필드의 유닛 전부에게 1점의 피해를 준다."
+      ],
+      "Tag": [
+        "축제",
+        "기갑"
+      ]
+    },
+    {
+      "No": "1V12",
+      "Name": "확성 수레",
+      "Attack": 3,
+      "Health": 3,
+      "Sprite": "Sprites/5. Festival/12 확성 수레",
+      "Faction": "Festival",
+      "Color": "V",
+      "CardFront": "Sprites/card/05 축제카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 4,
+      "Kind": "Unit",
+      "Keyword": [
+        "광란 2",
+        "앵콜 V"
+      ],
+      "Effect": [
+        "자신 필드의 유닛이 폐기될 때마다, 상대 필드의 카드 1장에 공포를 건다."
+      ],
+      "Tag": [
+        "축제",
+        "기갑"
+      ]
+    },
+
+    {
+      "No": "1C01",
+      "Name": "차원 강도",
+      "Attack": 2,
+      "Health": 2,
+      "Sprite": "Sprites/0. independent/01 차원 강도",
+      "Faction": "Neutral",
+      "Color": "C",
+      "CardFront": "Sprites/card/00 무색카드틀",
+      "NeutralCost": 1,
+      "ColorCost": 0,
+      "Kind": "Unit",
+      "Keyword": [
+        ""
+      ],
+      "Effect": [
+        "이 유닛은 HQ를 공격할 수 없다."
+      ],
+      "Tag": [
+        "무소속",
+        "보병"
+      ]
+    }
+  ]
+}

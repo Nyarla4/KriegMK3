@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e9249c5e4a1f54180e507edd33db5a, type: 3}
+  m_Name: DeckSO
+  m_EditorClassIdentifier: 
+  cards:
+  - No: 1R01
+    Name: "\uC81C\uAD6D \uADFC\uC704\uBCD1"
+    Attack: 2
+    Health: 2
+    Sprite: "Sprites/1. Empire/01 \uC81C\uAD6D \uADFC\uC704\uBCD1"
+    Faction: Empire
+    Color: R
+    CardFront: "Sprites/card/01 \uC81C\uAD6D\uCE74\uB4DC\uD2C0"
+    NeutralCost: 0
+    ColorCost: 1
+    Kind: Unit
+    Keyword:
+    - "\uC81C\uC2DD"
+    Effect:
+    - 
+    Tag:
+    - "\uC81C\uAD6D"
+    - "\uBCF4\uBCD1"
+  - No: 1C01
+    Name: "\uCC28\uC6D0 \uAC15\uB3C4"
+    Attack: 2
+    Health: 2
+    Sprite: "Sprites/0. independent/01 \uCC28\uC6D0 \uAC15\uB3C4"
+    Faction: Neutral
+    Color: C
+    CardFront: "Sprites/card/00 \uBB34\uC0C9\uCE74\uB4DC\uD2C0"
+    NeutralCost: 1
+    ColorCost: 0
+    Kind: Unit
+    Keyword:
+    - 
+    Effect:
+    - "\uC774 \uC720\uB2DB\uC740 HQ\uB97C \uACF5\uACA9\uD560 \uC218 \uC5C6\uB2E4."
+    Tag:
+    - "\uBB34\uC18C\uC18D"
+    - "\uBCF4\uBCD1"
+  - No: 1R03
+    Name: "\uC9C0\uC815 \uC0AC\uC218"
+    Attack: 1
+    Health: 1
+    Sprite: "Sprites/1. Empire/03 \uC9C0\uC815 \uC0AC\uC218"
+    Faction: Empire
+    Color: R
+    CardFront: "Sprites/card/01 \uC81C\uAD6D\uCE74\uB4DC\uD2C0"
+    NeutralCost: 0
+    ColorCost: 1
+    Kind: Unit
+    Keyword:
+    - 
+    Effect:
+    - "[L] : \uD544\uB4DC\uC758 \uC720\uB2DB 1\uC7A5\uC5D0 2\uC810\uC758 \uD53C\uD574\uB97C
+      \uC900\uB2E4."
+    Tag:
+    - "\uC81C\uAD6D"
+    - "\uBCF4\uBCD1"
+  - No: 1R04
+    Name: "\uC81C\uAD6D \uACF5\uBCD1"
+    Attack: 1
+    Health: 1
+    Sprite: "Sprites/1. Empire/04 \uC81C\uAD6D \uACF5\uBCD1"
+    Faction: Empire
+    Color: R
+    CardFront: "Sprites/card/01 \uC81C\uAD6D\uCE74\uB4DC\uD2C0"
+    NeutralCost: 2
+    ColorCost: 1
+    Kind: Unit
+    Keyword:
+    - 
+    Effect:
+    - "[L] : \uD544\uB4DC\uC758 \uC9C0\uC18D \uC804\uB7B5 1\uC7A5\uC744 \uD3D0\uAE30\uD55C\uB2E4."
+    - "[L] : \uC790\uC2E0 \uD544\uB4DC\uC758 \uAE30\uAC11 \uC720\uB2DB 1\uC7A5\uC5D0
+      +1/+0\uC744 \uBD80\uC5EC\uD55C\uB2E4."
+    Tag:
+    - "\uC81C\uAD6D"
+    - "\uBCF4\uBCD1"
+  - No: 1R05
+    Name: "\uC81C\uAD6D \uD638\uC704\uBCD1\uB2E8"
+    Attack: 2
+    Health: 2
+    Sprite: "Sprites/1. Empire/05 \uC81C\uAD6D \uD638\uC704\uBCD1\uB2E8"
+    Faction: Empire
+    Color: R
+    CardFront: "Sprites/card/01 \uC81C\uAD6D\uCE74\uB4DC\uD2C0"
+    NeutralCost: 1
+    ColorCost: 2
+    Kind: Unit
+    Keyword:
+    - "\uBC29\uD638 1"
+    - "\uACBD\uACC4"
+    Effect:
+    - 
+    Tag:
+    - "\uC81C\uAD6D"
+    - "\uBCF4\uBCD1"
+  - No: 1R06
+    Name: "\uC81C\uAD6D \uACF5\uC218\uBD80\uB300"
+    Attack: 2
+    Health: 2
+    Sprite: "Sprites/1. Empire/06 \uC81C\uAD6D \uACF5\uC218\uBD80\uB300"
+    Faction: Empire
+    Color: R
+    CardFront: "Sprites/card/01 \uC81C\uAD6D\uCE74\uB4DC\uD2C0"
+    NeutralCost: 1
+    ColorCost: 1
+    Kind: Unit
+    Keyword:
+    - "\uC18D\uACF5"
+    Effect:
+    - 
+    Tag:
+    - "\uC81C\uAD6D"
+    - "\uBCF4\uBCD1"
+  - No: 1R07
+    Name: "\uC138\uAE08 \uC9D5\uC218\uC778"
+    Attack: 1
+    Health: 2
+    Sprite: "Sprites/1. Empire/07 \uC138\uAE08 \uC9D5\uC218\uC778"
+    Faction: Empire
+    Color: R
+    CardFront: "Sprites/card/01 \uC81C\uAD6D\uCE74\uB4DC\uD2C0"
+    NeutralCost: 0
+    ColorCost: 3
+    Kind: Unit
+    Keyword:
+    - "\uADF9\uBE44"
+    Effect:
+    - "\uC0C1\uB300\uAC00 \uB0B4\uB294 \uBAA8\uB4E0 \uCE74\uB4DC\uC758 \uCF54\uC2A4\uD2B8\uB294
+      1 \uC99D\uAC00\uD55C\uB2E4"
+    Tag:
+    - "\uC81C\uAD6D"
+    - "\uBCF4\uBCD1"
+  - No: 1R31
+    Name: "\uB300\uACF5 \uBBC0\uAD6C\uC640\uB974"
+    Attack: 0
+    Health: 20
+    Sprite: "Sprites/1. Empire/31 \uB300\uACF5 \uBBC0\uAD6C\uC640\uB974"
+    Faction: Empire
+    Color: R
+    CardFront: "Sprites/card/01 \uC81C\uAD6D\uCE74\uB4DC\uD2C0"
+    NeutralCost: 0
+    ColorCost: 0
+    Kind: HQ
+    Keyword:
+    - 
+    Effect:
+    - "[L] : \uC790\uC2E0\uC774 \uC81C\uAD6D \uAE30\uAC11 \uC720\uB2DB\uC744 \uB0BC
+      \uB54C, \uADF8 \uCE74\uB4DC\uC758 \uCF54\uC2A4\uD2B8 R\uC744 \uC774 \uCE74\uB4DC\uB85C
+      \uC9C0\uBD88\uD55C\uB2E4."
+    Tag:
+    - "\uC81C\uAD6D"
+  - No: 1B01
+    Name: "\uBBFC\uCD08\uB2E8\uC6D0"
+    Attack: 0
+    Health: 1
+    Sprite: "Sprites/2. Union/01_\uBBFC\uCD08\uB2E8\uC6D0"
+    Faction: Union
+    Color: B
+    CardFront: "Sprites/card/02 \uB828\uB9F9\uCE74\uB4DC\uD2C0"
+    NeutralCost: 0
+    ColorCost: 0
+    Kind: Unit
+    Keyword:
+    - "\uC81C\uC2DD"
+    Effect:
+    - "[L] : \uC790\uC2E0\uC774 \uB828\uB9F9 \uCE74\uB4DC\uB97C \uB0B4\uAC70\uB098
+      \uB828\uB9F9 \uCE74\uB4DC\uC758 \uD6A8\uACFC\uB97C \uBC1C\uB3D9\uD560 \uB54C,
+      \uD544\uB4DC\uC758 \uC774 \uCE74\uB4DC\uB97C \uD3D0\uAE30\uD558\uB294 \uAC83\uC73C\uB85C
+      \uC774 \uCE74\uB4DC\uB85C \uADF8 \uCE74\uB4DC \uB610\uB294 \uD6A8\uACFC\uC758
+      \uCF54\uC2A4\uD2B8 B\uB97C \uC9C0\uBD88\uD55C\uB2E4."
+    Tag:
+    - "\uB828\uB9F9"
+    - "\uBCF4\uBCD1"
