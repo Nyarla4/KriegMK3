@@ -42,8 +42,6 @@ public class CardManager : MonoBehaviour//, IPunObservable
             onCardArea = chkCardArea();
             onSaveArea = chkSaveArea();
         }
-        
-
     }
 
     //시작 시 실행할 것
@@ -232,6 +230,24 @@ public class CardManager : MonoBehaviour//, IPunObservable
     public void mouseOver(Card card)
     {
         selected = card;
+        switch (TurnManager.Inst.getPhase())
+        {
+            case PHASE.MAIN:
+                TurnManager.Inst.setSelectedCost(selected);//코스트 턴매니저에 넘기는 함수
+                break;
+            case PHASE.PAYING:
+                break;
+            case PHASE.TARGETING:
+                break;
+            case PHASE.WAITING:
+                break;
+            case PHASE.SAVING:
+                break;
+            case PHASE.NUM:
+                break;
+            default:
+                break;
+        }
         if (!isDrag)
             EnlargeCard(true, card);
     }
@@ -275,12 +291,14 @@ public class CardManager : MonoBehaviour//, IPunObservable
                     case PHASE.MAIN:
                         if (onSaveArea)//저축영역이라면 저축을
                             TurnManager.Inst.setPhase(PHASE.SAVING);
-                        else//아니라면 사용을  *코스트 확인 추가 필요
-                            if(canSpawn(card))//코스트 확인 함수
+                        else//아니라면 사용을
                         {
-                            TurnManager.Inst.setSelectedCost(selected);//코스트 턴매니저에 넘기는 함수
-                            TurnManager.Inst.setPhase(PHASE.PAYING);//페이즈 넘기는 함수
-                            spawn(card);//실행 함수
+                            //print(canSpawn(card));
+                            if (canSpawn(card))//코스트 확인 함수
+                            {
+                                TurnManager.Inst.setPhase(PHASE.PAYING);//페이즈 넘기는 함수
+                                spawn(card);//실행 함수
+                            }
                         }
                         break;
                     case PHASE.SAVING:
@@ -415,7 +433,17 @@ public class CardManager : MonoBehaviour//, IPunObservable
             }
             else//무색 코스트도 있을 경우
             {
-
+                int costColor = 1;
+                int costNeutral = 0;
+                foreach (var item in myCards)
+                {
+                    if (item.CardData.Color == card.CardData.Color)
+                        costColor++;
+                }
+                if (costColor > color)
+                {
+                    costNeutral = costColor - color;
+                }
             }
         }
         return canSpawn;
