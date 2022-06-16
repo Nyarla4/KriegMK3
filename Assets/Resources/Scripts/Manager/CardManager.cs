@@ -290,7 +290,7 @@ public class CardManager : MonoBehaviour//, IPunObservable
                 {
                     case PHASE.MAIN:
                         if (onSaveArea)//저축영역이라면 저축을
-                            TurnManager.Inst.setPhase(PHASE.SAVING);
+                        { }
                         else//아니라면 사용을
                         {
                             //print(canSpawn(card));
@@ -300,8 +300,6 @@ public class CardManager : MonoBehaviour//, IPunObservable
                                 spawn(card);//실행 함수
                             }
                         }
-                        break;
-                    case PHASE.SAVING:
                         break;
                     case PHASE.PAYING:
                         myCards.Remove(card);

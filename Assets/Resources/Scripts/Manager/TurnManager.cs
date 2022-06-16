@@ -16,7 +16,6 @@ public enum PHASE
     PAYING, // 코스트 지불 중.(지불 후 메인 혹은 타겟팅으로)
     TARGETING, // 타겟 지정 중.(지정 후 효과 처리 후 메인으로)
     WAITING, //상대 턴
-    SAVING, //저축 중
     NUM // 상태가 몇 종류 있는지 나타낸다
 };
 
@@ -72,8 +71,6 @@ public class TurnManager : MonoBehaviour
                             this.next_phase = PHASE.MAIN;
                         break;
                     case PHASE.TARGETING:
-                        break;
-                    case PHASE.SAVING:
                         break;
                 }
             }
