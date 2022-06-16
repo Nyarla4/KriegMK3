@@ -304,28 +304,24 @@ public class CardManager : MonoBehaviour//, IPunObservable
                     case PHASE.SAVING:
                         break;
                     case PHASE.PAYING:
-                        if (TurnManager.Inst.getCost(true) > 1)//색 코스트가 남아있다면
+                        myCards.Remove(card);
+                        card.transform.DOKill();
+                        PhotonNetwork.Destroy(card.gameObject);
+                        selected = null;
+                        CardAlignment();
+                        if (TurnManager.Inst.getCost(true) > 0)//색 코스트가 남아있다면
                         {
                             if (TurnManager.Inst.getSelected() == card.CardData.Color)//같은 색이라면 색 코스트 감소
                             {
                                 TurnManager.Inst.useCost(true);
-                                myCards.Remove(card);
-                                card.transform.DOKill();
-                                PhotonNetwork.Destroy(card.gameObject);
-                                selected = null;
-                                CardAlignment();
                             }
                             else//다른 색이라면 무색 코스트 감소
                             {
                                 TurnManager.Inst.useCost(false);
-                                myCards.Remove(card);
-                                card.transform.DOKill();
-                                PhotonNetwork.Destroy(card.gameObject);
-                                selected = null;
-                                CardAlignment();
                             }
-
                         }
+                        else//무색만 남아있다면
+                            TurnManager.Inst.useCost(false);//무색 코스트 감소
                         break;
                     case PHASE.TARGETING:
                         break;
