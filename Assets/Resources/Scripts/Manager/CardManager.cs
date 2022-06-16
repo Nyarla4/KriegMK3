@@ -395,53 +395,33 @@ public class CardManager : MonoBehaviour//, IPunObservable
 
     bool canSpawn(Card card)
     {
-        bool canSpawn = false;
+        //코스트 지불이 불가능한 상황일때 false를 반환한다.
         int color = card.CardData.ColorCost;
         int neutral = card.CardData.NeutralCost;
-        //코스트 지불이 불가능한 상황일때 false를 반환한다.
-        if (color < 1)//색 코스트가 없을 경우
+        int ColorHave = 0;
+        int NeutralHave = 0;
+        foreach (var item in myCards)
         {
-            if (neutral < 1)//무색 코스트도 없을 경우
-                canSpawn = true;//사용 가능
-            else//무색 코스트만 있을 경우
-            {//패의 장수+저축 장수+1(해당카드)>=코스트 : 사용가능
-                if (myCards.Count + EntityManager.Inst.getSaves().Count + 1 >= neutral)
-                    canSpawn = true;
-            }
+            if (item.CardData.Color == card.CardData.Color)
+                ColorHave++;
+            else
+                NeutralHave++;
         }
-        else//색 코스트가 있을 경우
+        foreach (var item in EntityManager.Inst.getSaves())
         {
-            if (neutral < 1)//무색 코스트는 없을 경우
-            {
-                int costColor = 1;
-                foreach (var item in myCards)
-                {
-                    if (item.CardData.Color == card.CardData.Color)
-                        costColor++;
-                }
-                foreach (var item in EntityManager.Inst.getSaves())
-                {
-                    if (item.getColor() == card.CardData.Color)
-                        costColor++;
-                }
-                if (costColor >= color)
-                    canSpawn = true;
-            }
-            else//무색 코스트도 있을 경우
-            {
-                int costColor = 1;
-                int costNeutral = 0;
-                foreach (var item in myCards)
-                {
-                    if (item.CardData.Color == card.CardData.Color)
-                        costColor++;
-                }
-                if (costColor > color)
-                {
-                    costNeutral = costColor - color;
-                }
-            }
+            if (item.getColor() == card.CardData.Color)
+                ColorHave++;
+            else
+                NeutralHave++;
         }
-        return canSpawn;
+        if (color + neutral > ColorHave + NeutralHave)
+            return false;
+        else
+        {
+            if (color > ColorHave)
+                return false;
+            else
+                return true;
+        }
     }
 }
