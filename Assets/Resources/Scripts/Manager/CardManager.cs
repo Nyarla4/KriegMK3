@@ -241,8 +241,6 @@ public class CardManager : MonoBehaviour//, IPunObservable
                 break;
             case PHASE.WAITING:
                 break;
-            case PHASE.SAVING:
-                break;
             case PHASE.NUM:
                 break;
             default:
