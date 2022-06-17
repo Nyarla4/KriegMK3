@@ -29,6 +29,10 @@ public class CardManager : MonoBehaviour//, IPunObservable
     bool onCardArea = false;//패 영역
     bool onSaveArea = false;//저축 영역
 
+    Vector3 cardSpawnPoint = Vector3.zero;
+    Vector3 cardSavePoint = Vector3.zero;
+    Vector3 cardDeadPoint = Vector3.zero;
+
     [SerializeField] GameObject playPanel;
     void Start()
     {
@@ -47,11 +51,17 @@ public class CardManager : MonoBehaviour//, IPunObservable
     //시작 시 실행할 것
     public void GameStart(bool isFirst)
     {
-        SetPlayer();
-        SetupDeckBuffer();
-        HQ = deckBuffer.Find(item => item.Kind == "HQ");
-        deckBuffer.Remove(HQ);
-        player.GetComponent<roomPlayer>().setPlayer(HQ);
+        SetPlayer();//플레이어 설정
+        SetupDeckBuffer();//덱 조정
+        HQ = deckBuffer.Find(item => item.Kind == "HQ");//HQ파악
+        deckBuffer.Remove(HQ);//덱에서 HQ 제거
+        player.GetComponent<roomPlayer>().setPlayer(HQ);//플레이어 아바타에 HQ 적용
+
+        cardSpawnPoint = player.transform.position + (player.transform.right * 12.0f);
+        cardSavePoint = player.transform.position + (player.transform.right * 8.0f);
+        cardDeadPoint = player.transform.position + (player.transform.right * -8.0f);
+
+        //시작 드로우
         if (isFirst)
         {
             for (int i = 0; i < 4; i++)
@@ -67,8 +77,10 @@ public class CardManager : MonoBehaviour//, IPunObservable
             }
         }
 
-        EntityManager.Inst.setBossEntity();
+        EntityManager.Inst.setBossEntity();//HQ 엔티티화
         
+        //저축영역
+
         if (isFirst)
             TurnManager.Inst.setPhase(PHASE.MAIN);
         else
@@ -109,7 +121,7 @@ public class CardManager : MonoBehaviour//, IPunObservable
         //    Instantiate(cardPrefab, player.transform.position + (player.transform.right * 2.0f), player.transform.rotation) :
         //    Instantiate(cardPrefab, enemy.transform.position + (enemy.transform.right * 2.0f), enemy.transform.rotation);
         var cardObj =
-            PhotonNetwork.Instantiate("Prefabs/Card", player.transform.position + (player.transform.right * 12.0f), player.transform.rotation);
+            PhotonNetwork.Instantiate("Prefabs/Card", cardSpawnPoint, player.transform.rotation);
         var card = cardObj.GetComponent<Card>();
         //card.PVset();
         card.setup(PopCard());
@@ -288,7 +300,10 @@ public class CardManager : MonoBehaviour//, IPunObservable
                 {
                     case PHASE.MAIN:
                         if (onSaveArea)//저축영역이라면 저축을
-                        { }
+                        {
+                            EntityManager.Inst.cardToEntity(card.CardData, cardSavePoint, true);
+                            useCards(card);
+                        }
                         else//아니라면 사용을
                         {
                             //print(canSpawn(card));
@@ -300,11 +315,8 @@ public class CardManager : MonoBehaviour//, IPunObservable
                         }
                         break;
                     case PHASE.PAYING:
-                        myCards.Remove(card);
-                        card.transform.DOKill();
-                        PhotonNetwork.Destroy(card.gameObject);
-                        selected = null;
-                        CardAlignment();
+                        useCards(card);
+                        EntityManager.Inst.cardToEntity(card.CardData, cardDeadPoint, false);
                         if (TurnManager.Inst.getCost(true) > 0)//색 코스트가 남아있다면
                         {
                             if (TurnManager.Inst.getSelected() == card.CardData.Color)//같은 색이라면 색 코스트 감소
@@ -363,9 +375,21 @@ public class CardManager : MonoBehaviour//, IPunObservable
     //저축 영역 확인
     bool chkSaveArea()
     {
+        float downUp = player.transform.rotation.eulerAngles.z == 0 ? 1f : -1f;
+        Vector3 mouse = Utils.MousePos * downUp;
+        float left = cardSavePoint.x - 1.7f;
+        float right = cardSavePoint.x + 1.7f;
+        float up = cardSavePoint.y + 1.7f;
+        float down = cardSavePoint.y - 1.7f;
+        if (mouse.x <= right && mouse.x >= left
+            && mouse.y <= up && mouse.y >= down)
+        {
+            return true;
+        }
         return false;
     }
 
+    //카드 사용
     void spawn(Card card)
     {
         switch (card.CardData.Kind)
@@ -374,11 +398,7 @@ public class CardManager : MonoBehaviour//, IPunObservable
                 float downUp = player.transform.rotation.eulerAngles.z == 0 ? 1f : -1f;
                 if (EntityManager.Inst.SpawnEntity(card.CardData, Utils.MousePos * downUp))
                 {
-                    myCards.Remove(card);
-                    card.transform.DOKill();
-                    PhotonNetwork.Destroy(card.gameObject);
-                    selected = null;
-                    CardAlignment();
+                    useCards(card);
                 }
                 break;
             case "Strategy"://전략 실행
@@ -419,5 +439,20 @@ public class CardManager : MonoBehaviour//, IPunObservable
             else
                 return true;
         }
+    }
+
+    //패 사용
+    void useCards(Card card)
+    {
+        myCards.Remove(card);
+        card.transform.DOKill();
+        PhotonNetwork.Destroy(card.gameObject);
+        selected = null;
+        CardAlignment();
+    }
+
+    public Vector3 deadPos()
+    {
+        return cardDeadPoint;
     }
 }

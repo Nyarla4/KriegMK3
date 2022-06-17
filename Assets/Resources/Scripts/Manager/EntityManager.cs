@@ -109,6 +109,23 @@ public class EntityManager : MonoBehaviour
 
         return true;
     }
+
+    //카드에서 엔티티로(폐기 혹은 저축)
+    public void cardToEntity(CardData card, Vector3 spawnPos, bool save)
+    {
+        Quaternion rot = CardManager.Inst.getPlayer().transform.rotation;
+
+        var entityObj =
+            PhotonNetwork.Instantiate("Prefabs/Entity", spawnPos, rot);
+        entityObj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        var entity = entityObj.GetComponent<Entity>();
+        entity.setup(card);
+        entity.setSaveorDead(true, true);
+        if (save)
+            mySaves.Add(entity);
+        else
+            myDeads.Add(entity);
+    }
     //각 턴 초기화
     public void turnInit()
     {
@@ -125,14 +142,74 @@ public class EntityManager : MonoBehaviour
     {
         return mySaves;
     }
+    //저축칸 제일 앞 엔티티 사용
+    public void useSave(bool isColor)
+    {
+        Entity card = null;
+        foreach (var item in mySaves)
+        {
+            if(isColor)
+            {
+                if (item.getColor() == TurnManager.Inst.getSelected())
+                {
+                    card = item;
+                    break;
+                }
+            }
+            else
+            {
+                card = item;
+                break;
+            }
+        }
+        if (isColor
+            && card != null)
+        {
+            TurnManager.Inst.useCost(true);
+        }
+        else if (card != null)
+        {
+            TurnManager.Inst.useCost(false);
+        }
+        else
+            return;
+        deadEntities(1, card);
+    }
+
+
     void Start()
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    //엔티티 폐기
+    void deadEntities(int from, Entity entity)
+    {
+        Quaternion rot = CardManager.Inst.getPlayer().transform.rotation.eulerAngles.z == 0 ? Utils.QI : Quaternion.Euler(0, 0, 180);
+        switch (from)
+        {
+            case 0://필드에서
+                myEntities.Remove(entity);
+                myDeads.Add(entity);
+                entity.moveTransform(CardManager.Inst.deadPos(), rot, false);
+                EntityAlignment();
+                entity.setSaveorDead(false, true);
+                break;
+            case 1://저축에서
+                mySaves.Remove(entity);
+                myDeads.Add(entity);
+                entity.moveTransform(CardManager.Inst.deadPos(), rot, false);
+                entity.setSaveorDead(true, false);
+                entity.setSaveorDead(false, true);
+                break;
+            default:
+                break;
+        }
         
     }
 }

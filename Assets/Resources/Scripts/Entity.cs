@@ -142,6 +142,26 @@ public class Entity : MonoBehaviour
         originPos = value;
     }
 
+    public void setSaveorDead(bool isSave, bool value)
+    {
+        if (PV.IsMine)
+        {
+            if (isSave)
+                PV.RPC("saveSet", RpcTarget.All, value);
+            else
+                PV.RPC("deadSet", RpcTarget.All, value);
+        }
+    }
+    [PunRPC]
+    void saveSet(bool value)
+    {
+        this.isSave = value;
+    }
+    [PunRPC]
+    void deadSet(bool value)
+    {
+        this.isDead = value;
+    }
     #endregion
 
     #region 매 턴 확인
@@ -196,6 +216,11 @@ public class Entity : MonoBehaviour
 
     void Update()
     {
+        if (isSave || isDead)
+        {
+            sleepParticle.SetActive(false);
+            return;
+        }
         if (healthTMP!=null)
         {
             healthTMP.text = CardData.Health.ToString();
@@ -215,7 +240,6 @@ public class Entity : MonoBehaviour
         }
     }
  
-
     public string getColor()
     {
         return CardData.Color;

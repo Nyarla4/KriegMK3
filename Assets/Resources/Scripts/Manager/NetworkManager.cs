@@ -70,6 +70,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     [Header("PlayPanel")]
     [SerializeField] GameObject PlayPanel;
+    [SerializeField] GameObject PlayBG;
 
     List<RoomInfo> myList = new List<RoomInfo>();
     int currPage = 1, maxPage, multiple;
@@ -86,6 +87,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         RoomPanel.SetActive(false);
         DeckPanel.SetActive(false);
         PlayPanel.SetActive(false);
+        PlayBG.SetActive(false);
     }
     void Update()
     {
@@ -93,17 +95,17 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         StatusText.text = "현재";
         StatusText.rectTransform.sizeDelta = new Vector2(240, 100);
         StatusText.rectTransform.localPosition = new Vector3(-360, 220, 0);
-        if (DeckPanel.activeSelf)
+        if (PlayPanel.activeSelf)
+        {
+            StatusText.text = "플레이 중";
+        }
+        else if (DeckPanel.activeSelf)
         {
             StatusText.rectTransform.sizeDelta = new Vector2(480, 100);
             StatusText.rectTransform.localPosition = new Vector3(-240, 220, 0);
             StatusText.text += " 덱 설정중";
             StatusText.text += " / 현재 덱 장수 : ";
             StatusText.text += DeckManager.Inst.deck.Count;
-        }
-        else if (PlayPanel.activeSelf)
-        {
-            StatusText.text = "플레이 중";
         }
         else
         {
@@ -168,7 +170,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 {
                     RoomPanel.SetActive(false);
                     PlayPanel.SetActive(true);
-                    GameObject.Find("Main Camera").transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180));
+                    PlayBG.SetActive(true);
+                    GameObject.Find("Main Camera").transform.rotation =
+                        PlayBG.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180));
                     foreach (var playerTemp in temp)
                     {
                         if (playerTemp.GetComponent<PhotonView>().IsMine)
@@ -338,6 +342,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                         PT.GetComponent<roomPlayer>().setReady(true);
                         RoomPanel.SetActive(false);
                         PlayPanel.SetActive(true);
+                        PlayBG.SetActive(true);
                         foreach (var item in tempPlayer)
                         {
                             if (item.GetComponent<PhotonView>().IsMine)
@@ -384,13 +389,36 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     PT.GetComponent<roomPlayer>().setTurn(false);
                     break;
                 case PHASE.PAYING://지불 중일때 : 패의 지불이 끝나고, 저축에서 지불 할때
-                    //저축에서 나머지 지불 다하기, 부족하면 패의 지불로 돌아가기
+                    int colorCost =
+                    TurnManager.Inst.getCost(true);
+                    int neutralCost =
+                        TurnManager.Inst.getCost(false);
+                    int saveColor = 0;
+                    int saveNeutral = 0;
+                    foreach (var item in EntityManager.Inst.getSaves())
+                    {
+                        if (item.getColor() == TurnManager.Inst.getSelected())
+                            saveColor++;
+                        else
+                            saveNeutral++;
+                    }
+                    //1.저축에서 코스트 지불 가능한지 확인
+                    if (colorCost + neutralCost > saveColor + saveNeutral)
+                        return;
+                    else if (colorCost > saveColor)
+                        return;
+                    //2.가능할 경우 저축에서 코스트 지불
+                    EntityManager.Inst.useSave(colorCost > 0);//유색 코스트가 남았다면 유색을, 아니라면 무색을
+                    if (colorCost + neutralCost > 0)//코스트가 남았다면 반복
+                        TurnEnd();
+                    
+                    //1)mySaves에서 지불할 엔티티를 제거한다
+                    //2)해당 엔티티를 물리적으로 제거한다
+                    //3)코스트에서 제거한 엔티티의 값만큼 깎는다
                     break;
                 case PHASE.TARGETING:
                     break;
                 case PHASE.WAITING:
-                    break;
-                case PHASE.SAVING:
                     break;
                 case PHASE.NUM:
                     break;
