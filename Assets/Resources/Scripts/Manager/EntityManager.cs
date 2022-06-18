@@ -276,9 +276,10 @@ public class EntityManager : MonoBehaviour
                 else
                 {
                     item.setLock(false);
-                    item.setAttackable(true);
                 }
             }
+            if (!item.getLock())
+                item.setAttackable(true);
         }
     }
     #region 마우스 조작
@@ -316,6 +317,35 @@ public class EntityManager : MonoBehaviour
         }
         selectedEntity = null;
         targetEntity = null;
+    }
+
+    public void entityMouseDrag()
+    {
+        switch (TurnManager.Inst.getPhase())
+        {
+            case PHASE.MAIN:
+                bool existTarget = false;
+                foreach (var item in Physics2D.RaycastAll(Utils.MousePos + Vector3.forward, Vector3.back))
+                {
+                    Entity entity = item.collider?.GetComponent<Entity>();
+                    if (entity != null
+                        &&!entity.isMine()
+                        &&selectedEntity.getAttackable())
+                    {
+                        targetEntity = entity;
+                        existTarget = true;
+                    }
+                }
+                if (!existTarget)
+                    targetEntity = null;
+                break;
+            case PHASE.TARGETING:
+                break;
+            case PHASE.WAITING:
+                return;
+            default:
+                break;
+        }
     }
     #endregion
 }

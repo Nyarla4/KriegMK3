@@ -407,6 +407,7 @@ public class CardManager : MonoBehaviour//, IPunObservable
         }
     }
 
+    //사용가능여부
     bool canSpawn(Card card)
     {
         //코스트 지불이 불가능한 상황일때 false를 반환한다.
@@ -448,7 +449,7 @@ public class CardManager : MonoBehaviour//, IPunObservable
         selected = null;
         CardAlignment();
     }
-
+    //폐기 위치
     public Vector3 deadPos()
     {
         return cardDeadPoint;

@@ -330,4 +330,29 @@ public class Entity : MonoBehaviour
         }
         return false;
     }
+    #region 마우스조작
+    private void OnMouseDown()
+    {
+        if (PV.IsMine)
+            EntityManager.Inst.entityMouseDown(this);
+    }
+    private void OnMouseDrag()
+    {
+        if (PV.IsMine)
+            EntityManager.Inst.entityMouseDrag();
+    }
+    private void OnMouseUp()
+    {
+        if (PV.IsMine)
+            EntityManager.Inst.entityMouseUp(this);
+    }
+    #endregion
+    public bool isMine()
+    {
+        return PV.IsMine;
+    }
+    public string getName()
+    {
+        return CardData.Name;
+    }
 }
