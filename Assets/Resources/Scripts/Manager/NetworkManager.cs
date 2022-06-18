@@ -236,7 +236,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
-        PT=PhotonNetwork.Instantiate("Prefabs/roomPlayer", Vector3.zero, Quaternion.identity);
+        PT=PhotonNetwork.Instantiate("Prefabs/lobby/roomPlayer", Vector3.zero, Quaternion.identity);
         LobbyPanel.SetActive(false);
         RoomPanel.SetActive(true);
         RoomPanel.transform.GetChild(7).gameObject.SetActive(false);

@@ -27,7 +27,7 @@ public class roomPlayer : MonoBehaviour
         PV = this.GetComponent<PhotonView>();
         SR = this.GetComponent<SpriteRenderer>();
         colorR = colorG = colorB = 1.0f;
-        Name = Instantiate(Resources.Load("Prefabs/Name") as GameObject, GameObject.Find("RoomPanel").transform);
+        Name = Instantiate(Resources.Load("Prefabs/lobby/Name") as GameObject, GameObject.Find("RoomPanel").transform);
 
         PlayPanel = GameObject.Find("Canvas").transform.GetChild(5).gameObject;
 
