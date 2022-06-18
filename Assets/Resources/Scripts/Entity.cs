@@ -33,6 +33,16 @@ public class Entity : MonoBehaviour
     bool isSave = false;//저축 칸 여부
     bool isDead = false;//폐기 칸 여부
 
+    bool attackable = false;//공격가능 여부
+
+    bool fear = false;//공포상태 여부
+
+    bool maintain = false;//유지비 여부
+    int maintainColor = 0;//유색 유지비
+    int maintainNeutral = 0;//무색 유지비
+
+    int attack;
+    int health;
     #region 초기설정
     public void setup(CardData cardData)
     {
@@ -41,6 +51,8 @@ public class Entity : MonoBehaviour
                     cardData.No, cardData.Name, cardData.Attack, cardData.Health, cardData.Sprite,
                     cardData.Faction, cardData.Color, cardData.CardFront, cardData.NeutralCost, cardData.ColorCost, cardData.Kind,
                     cardData.Keyword, cardData.Effect, cardData.Tag);
+        attack = cardData.Attack;
+        health = cardData.Health;
     }
     [PunRPC]
     void Setup(
@@ -88,6 +100,31 @@ public class Entity : MonoBehaviour
         for (int i = 1; i < this.CardData.Effect.Length; i++)
         {
             Effect.GetComponent<TMP_Text>().text += string.Format("\n{0}", this.CardData.Effect[i]);
+        }
+
+        string isMaintain = "";
+        foreach (var item in this.CardData.Keyword)
+        {
+            if (item.Contains("유지비"))
+            {
+                maintain = true;
+                isMaintain = item;
+            }   
+        }
+
+        if(maintain)
+        {
+            string spr = isMaintain.Replace("유지비 ", "");
+            switch (spr)
+            {
+                case "R":
+                case "B":
+                case "W":
+                case "G":
+                case "V":
+                    maintainColor = 1;
+                    break;
+            }
         }
     }
     public void setHQ(CardData cardData, bool value)
@@ -169,10 +206,6 @@ public class Entity : MonoBehaviour
     {
         PV.RPC("turnSet", RpcTarget.All);
     }
-    public void setLock(bool value)
-    {
-        isLock = value;
-    }
     [PunRPC]
     void turnSet()
     {
@@ -221,12 +254,8 @@ public class Entity : MonoBehaviour
             sleepParticle.SetActive(false);
             return;
         }
-        if (healthTMP!=null)
-        {
-            healthTMP.text = CardData.Health.ToString();
-            if (healthTMP.text == "0")
-                healthTMP.text = "";
-        }
+        if (PV)
+            PV.RPC("setHealth", RpcTarget.All, health);
         if (!isHQOrEmpty)
         {
             if (turns != 0)
@@ -239,9 +268,66 @@ public class Entity : MonoBehaviour
             }
         }
     }
- 
+    [PunRPC]
+    void setHealth(int health)
+    {
+        CardData.Health = health;
+        if (healthTMP != null)
+        {
+            healthTMP.text = CardData.Health.ToString();
+            if (healthTMP.text == "0")
+                healthTMP.text = "";
+        }
+    }
+
+    public int getAttack()
+    {
+        return attack;
+    }
     public string getColor()
     {
         return CardData.Color;
+    }
+
+    #region 락, 공격여부 및 공포 조정
+    public void setLock(bool value)
+    {
+        isLock = value;
+    }
+    public bool getLock()
+    {
+        return isLock;
+    }
+    public void setAttackable(bool value)
+    {
+        attackable = value;
+    }
+    public bool getAttackable()
+    {
+        return attackable;
+    }
+    public void setFear(bool value)
+    {
+        fear = value;
+    }
+    public bool getFear()
+    {
+        return fear;
+    }
+    public bool getMaintain()
+    {
+        return maintain;
+    }
+    #endregion
+    //대미지를 받음
+    public bool Damaged(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            isDead = true;
+            return true;
+        }
+        return false;
     }
 }

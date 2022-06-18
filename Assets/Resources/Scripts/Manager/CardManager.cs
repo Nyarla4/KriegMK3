@@ -252,9 +252,7 @@ public class CardManager : MonoBehaviour//, IPunObservable
             case PHASE.TARGETING:
                 break;
             case PHASE.WAITING:
-                break;
-            case PHASE.NUM:
-                break;
+                return;
             default:
                 break;
         }

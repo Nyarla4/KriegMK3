@@ -13,7 +13,7 @@ public class EntityManager : MonoBehaviour
     void Awake() => Inst = this;
     //싱글톤 형식(매니저는 하나만 존재)
 
-    [SerializeField] GameObject damagePrefab;//대미지 프리펩
+    //[SerializeField] GameObject damagePrefab;//대미지 프리펩(포톤 인스턴싱이라 필요없음)
     [SerializeField] List<Entity> myEntities;//본인 엔티티
     [SerializeField] GameObject targeting;//타겟팅 오브젝트
     [SerializeField] Entity myEmptyEntity;//빈 엔티티
@@ -58,7 +58,7 @@ public class EntityManager : MonoBehaviour
                     targetX = (targets.Count - 1) * 1.7f + i * -3.4f;//후공기준위치(아마)
                     break;
             }
-            
+
             var target = targets[i];
             target.setOriginPos(new Vector3(targetX, targetY, 0));
             Quaternion rot = upDown == -1 ? Utils.QI : Quaternion.Euler(0, 0, 180);
@@ -98,7 +98,7 @@ public class EntityManager : MonoBehaviour
     {
         Quaternion rot = CardManager.Inst.getPlayer().transform.rotation;
 
-        var entityObj= 
+        var entityObj =
             PhotonNetwork.Instantiate("Prefabs/Entity", spawnPos, rot);
         entityObj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         var entity = entityObj.GetComponent<Entity>();
@@ -129,15 +129,11 @@ public class EntityManager : MonoBehaviour
     //각 턴 초기화
     public void turnInit()
     {
-        foreach (var item in myEntities)
-        {
-            item.setLock(false);//공포나 유지비 처리 필요
-            item.setTurn();
-        }
+        atkReset();//유지비 처리 필요
     }
 
 
-    //저축칸
+    //저축칸 반환
     public List<Entity> getSaves()
     {
         return mySaves;
@@ -148,7 +144,7 @@ public class EntityManager : MonoBehaviour
         Entity card = null;
         foreach (var item in mySaves)
         {
-            if(isColor)
+            if (isColor)
             {
                 if (item.getColor() == TurnManager.Inst.getSelected())
                 {
@@ -179,12 +175,20 @@ public class EntityManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
     // Update is called once per frame
     void Update()
     {
-        
+        ShowTargeting(ExistTargetingEntity);
+    }
+
+    //타겟팅 보이기
+    private void ShowTargeting(bool isShow)
+    {
+        targeting.SetActive(isShow);//타겟팅 중일때는 보인다
+        if (ExistTargetingEntity)//타겟이 존재하면, 타겟의 위치로
+            targeting.transform.position = targetEntity.transform.position;
     }
 
     //엔티티 폐기
@@ -210,6 +214,107 @@ public class EntityManager : MonoBehaviour
             default:
                 break;
         }
-        
+
     }
+
+    //대미지 이미지
+    void spawnDamage(int damage, Transform tr)
+    {
+        var damageTemp = PhotonNetwork.Instantiate("Prefabs/Damage", tr.position, tr.rotation).GetComponent<Damage>();
+        damageTemp.SetupTransform(tr);
+        damageTemp.Damaged(damage);
+    }
+    //공격
+    void Attack(Entity atk, Entity def)
+    {
+        atk.setAttackable(false);//공격했으니 공격불가 상태
+        atk.GetComponent<Order>().SetMostFrontOrder(true);//공격중 가장 위로
+        
+        Sequence sequence = DOTween.Sequence()
+            .Append(atk.transform.DOMove(def.getOriginPos(), 0.4f)).SetEase(Ease.InSine)
+            //공격자가 0.4초만에 방어자 위치로 이동
+            .AppendCallback(
+                () =>
+                {//양측 대미지 계산
+                    if (def.getHQorEmpty())
+                    { }// DamageBoss(defender.isMine, attacker.attack);
+                    else
+                        def.Damaged(atk.getAttack());
+                    spawnDamage(atk.getAttack(), def.transform);
+                    if (atk.getHQorEmpty())
+                    { }// DamageBoss(attacker.isMine, defender.attack);
+                    else
+                        atk.Damaged(def.getAttack());
+                    spawnDamage(def.getAttack(), atk.transform);
+                }
+            )
+            .Append(atk.transform.DOMove(atk.getOriginPos(), 0.4f)).SetEase(Ease.OutSine)
+            //공격자가 0.4초만에 공격자 위치로 이동
+            .OnComplete(//전투 종료
+                () => {
+                    //AttackCallback(attacker, defender);//죽은 엔티티 처리
+                    //if (myEntities.Contains(attacker)//공격자가 살아남았고(아직 본인 엔트리에 존재)
+                    //    && !attacker.isBorder)//경계가 아니라면
+                    //    attacker.locked = true;//락을 건다
+                }
+            );
+    }
+    //공격가능여부 초기화
+    void atkReset()
+    {
+        foreach (var item in myEntities)
+        {
+            if (item.getFear())
+                item.setFear(false);
+            else if(item.getLock())
+            {
+                if (item.getMaintain())
+                {
+                    //유지비 고민좀
+                }
+                else
+                {
+                    item.setLock(false);
+                    item.setAttackable(true);
+                }
+            }
+        }
+    }
+    #region 마우스 조작
+    public void entityMouseDown(Entity entity)
+    {
+        switch (TurnManager.Inst.getPhase())
+        {
+            case PHASE.MAIN:
+                selectedEntity = entity;
+                break;
+            case PHASE.TARGETING:
+                break;
+            case PHASE.WAITING:
+                return;
+            default:
+                break;
+        }
+    }
+    public void entityMouseUp(Entity entity)
+    {
+        switch (TurnManager.Inst.getPhase())
+        {
+            case PHASE.MAIN:
+                if (selectedEntity
+                    && targetEntity
+                    && selectedEntity.getAttackable())
+                    Attack(selectedEntity, targetEntity);
+                break;
+            case PHASE.TARGETING:
+                break;
+            case PHASE.WAITING:
+                return;
+            default:
+                break;
+        }
+        selectedEntity = null;
+        targetEntity = null;
+    }
+    #endregion
 }
