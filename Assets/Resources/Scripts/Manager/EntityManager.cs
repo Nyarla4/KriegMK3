@@ -264,6 +264,7 @@ public class EntityManager : MonoBehaviour
     {
         foreach (var item in myEntities)
         {
+            item.setTurn();
             if (item.getFear())
                 item.setFear(false);
             else if(item.getLock())
