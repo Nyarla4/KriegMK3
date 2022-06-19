@@ -60,6 +60,9 @@ public class Entity : MonoBehaviour
         string faction, string color, string cardFront, int neutralCost, int colorCost, string kind,
         string[] keyword, string[] effect, string[] tag)
     {
+        this.attack = attack;
+        this.health = health;
+
         this.CardData.No = no;
         this.CardData.Name = name;
         this.CardData.Attack = attack;
@@ -141,6 +144,9 @@ public class Entity : MonoBehaviour
         string faction, string color, string cardFront, int neutralCost, int colorCost, string kind,
         string[] keyword, string[] effect, string[] tag)
     {
+        this.attack = attack;
+        this.health = health;
+
         this.CardData.No = no;
         this.CardData.Name = name;
         this.CardData.Attack = attack;
@@ -326,6 +332,7 @@ public class Entity : MonoBehaviour
         if (health <= 0)
         {
             isDead = true;
+            
             return true;
         }
         return false;
