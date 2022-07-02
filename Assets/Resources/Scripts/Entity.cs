@@ -328,14 +328,18 @@ public class Entity : MonoBehaviour
     //대미지를 받음
     public bool Damaged(int damage)
     {
+        if (PV)
+            PV.RPC("getDamage", RpcTarget.All, damage);
+        return isDead;
+    }
+    [PunRPC]
+    void getDamage(int damage)
+    {
         health -= damage;
         if (health <= 0)
         {
             isDead = true;
-            
-            return true;
         }
-        return false;
     }
     #region 마우스조작
     private void OnMouseDown()
