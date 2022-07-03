@@ -55,7 +55,7 @@ public class EntityManager : MonoBehaviour
                     targetX = (targets.Count - 1) * -1.7f + i * 3.4f;//선공기준위치
                     break;
                 case 1:
-                    targetX = (targets.Count - 1) * 1.7f + i * -3.4f;//후공기준위치(아마)
+                    targetX = (targets.Count - 1) * 1.7f + i * -3.4f;//후공기준위치(아마)-애매하다
                     break;
             }
 
@@ -72,15 +72,28 @@ public class EntityManager : MonoBehaviour
     {
         if (!ExistMyEmptyEntity)//빈 엔티티가 없으면
             myEntities.Add(myEmptyEntity);//추가한다
-
+        int upDown = CardManager.Inst.getPlayer().transform.rotation.eulerAngles.z == 0 ? -1 : 1;
         //x위치 조정
         Vector3 emptyPos = myEmptyEntity.transform.position;
         emptyPos.x = xPos;
         myEmptyEntity.transform.position = emptyPos;
 
         int emptyIndex = MyEmptyEntityIndex;//빈 엔티티 인덱스 저장
-        myEntities.Sort((entity1, entity2) //x만 비교해서 작은것->큰것 순서로 정렬
+        switch (upDown)
+        {
+            case -1://선공
+                myEntities.Sort((entity1, entity2) //x만 비교해서 작은것->큰것 순서로 정렬
             => entity1.transform.position.x.CompareTo(entity2.transform.position.x));
+                break;
+            case 1://후공
+                myEntities.Sort((entity1, entity2) //x만 비교해서 큰것->작은것 순서로 정렬
+                => entity2.transform.position.x.CompareTo(entity1.transform.position.x));
+                break;
+        }
+        foreach (var item in myEntities)
+        {
+            print(item.getName());
+        }
         if (MyEmptyEntityIndex != emptyIndex)//정렬후 순서가 바뀌었을 경우
             EntityAlignment();//재정렬(물리적)
     }
