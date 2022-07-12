@@ -22,7 +22,7 @@ public class Entity : MonoBehaviour
 
     CardData CardData;//데이터
 
-    bool isHQOrEmpty;//빈 엔티티 혹은 HQ 확인
+    [SerializeField] bool isHQOrEmpty;//빈 엔티티 혹은 HQ 확인
 
     Vector3 originPos;//정렬용
 
@@ -168,6 +168,12 @@ public class Entity : MonoBehaviour
 
     public void setHQorEmpty(bool value)
     {
+        if (PV)
+            PV.RPC("HQorEmptySet", RpcTarget.All, value);
+    }
+    [PunRPC]
+    void HQorEmptySet(bool value)
+    {
         isHQOrEmpty = value;
     }
     public bool getHQorEmpty()
@@ -250,11 +256,22 @@ public class Entity : MonoBehaviour
     }
     void Start()
     {
-        
+        if (this.gameObject.name == "EmptyEntity")
+        {
+            this.setHQorEmpty(true);
+        }
     }
 
     void Update()
     {
+        if (this.tag == "Player" && !this.isHQOrEmpty)
+        {
+            this.setHQorEmpty(true);
+        }
+        if (!this.isHQOrEmpty && this.health <= 0)
+        {
+            EntityManager.Inst.deadEntities(0, this);
+        }
         if (isSave || isDead)
         {
             sleepParticle.SetActive(false);

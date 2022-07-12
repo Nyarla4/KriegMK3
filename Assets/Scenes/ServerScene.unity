@@ -11199,6 +11199,7 @@ MonoBehaviour:
   healthTMP: {fileID: 0}
   Effect: {fileID: 0}
   sleepParticle: {fileID: 0}
+  isHQOrEmpty: 1
 --- !u!4 &1899535197
 Transform:
   m_ObjectHideFlags: 0

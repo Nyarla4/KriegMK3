@@ -205,7 +205,7 @@ public class EntityManager : MonoBehaviour
     }
 
     //¿£Æ¼Æ¼ Æó±â
-    void deadEntities(int from, Entity entity)
+    public void deadEntities(int from, Entity entity)
     {
         Quaternion rot = CardManager.Inst.getPlayer().transform.rotation.eulerAngles.z == 0 ? Utils.QI : Quaternion.Euler(0, 0, 180);
         switch (from)

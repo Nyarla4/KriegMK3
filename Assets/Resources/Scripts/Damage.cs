@@ -43,7 +43,6 @@ public class Damage : MonoBehaviour
             .OnComplete(
                 () =>
                 {
-                    PhotonNetwork.Destroy(gameObject);//ÀÚ¸ê
                 }
             );
     }

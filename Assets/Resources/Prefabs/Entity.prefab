@@ -1193,6 +1193,7 @@ MonoBehaviour:
   healthTMP: {fileID: 510140957051124828}
   Effect: {fileID: 510140956209161826}
   sleepParticle: {fileID: 510140957090778873}
+  isHQOrEmpty: 0
 --- !u!114 &7839437448916090471
 MonoBehaviour:
   m_ObjectHideFlags: 0

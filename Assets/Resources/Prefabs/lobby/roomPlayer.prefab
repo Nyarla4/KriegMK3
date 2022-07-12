@@ -187,6 +187,7 @@ MonoBehaviour:
   healthTMP: {fileID: 4219090296421811029}
   Effect: {fileID: 0}
   sleepParticle: {fileID: 0}
+  isHQOrEmpty: 0
 --- !u!1 &8726243454935948671
 GameObject:
   m_ObjectHideFlags: 0
